@@ -8,6 +8,15 @@ More details from CMS 2025-2025 Data Analysis Workshop [JME project](https://ind
 
 ---
 
+## Set up
+
+```
+git clone git@github.com:Punnawichc/VBF_eta_spikes.git
+cd VBF_eta_spikes
+```
+
+---
+
 ## Analysis Structure
 
 ```
