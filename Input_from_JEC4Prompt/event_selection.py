@@ -65,7 +65,7 @@ if __name__ == "__main__":
     out_path = f"{args.output}/selected.root"
 
     with uproot.recreate(out_path) as out_file:
-        out_file["MC"]       = {b: mc_arrays[b][mc_mask] for b in mc_branches}
+        out_file.mktree("MC", {b: mc_arrays[b][mc_mask] for b in mc_branches}) 
         out_file["Data"]     = {b: data_arrays[b][data_mask] for b in dt_branches}
         out_file["Metadata"] = {"sumw": np.array([sumw])}
 
