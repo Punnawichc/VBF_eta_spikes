@@ -50,18 +50,19 @@ Only needs to run once per pT bin — output is saved to `output/selected.root`.
 ### Step 2 — Make histograms with MC reweighting
 Fills ROOT TH1D histograms and applies MC scale factor `w = xsec * lumi / sumw`.
 
-xsec -> please check from https://cmsweb.cern.ch/das/, now we use the dataset below which has xsec = 2240.0 pb
+xsec -> we are using the dataset below which has xsec = 2240.0 pb, but you can check it by yourself from https://cmsweb.cern.ch/das/
 ```
 /DYto2Mu-2Jets_Bin-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v6/NANOAODSIM
 ```
 sumw -> getting automatically from the MC input file in event_selection.py
 
-lumi -> please check with 
+lumi -> we are using run 398027 which has lumi = 1033.097330108 pb-1, but you can also check it by yourself by
 ```
 source /cvmfs/cms-bril.cern.ch/cms-lumi-pog/brilws-docker/brilws-env
 brilcalc lumi -u /pb -i /eos/user/c/cmsdqm/www/CAF/certification/Collisions25/Cert_Collisions2025_391658_398903_Golden.json -r 398027 --without-checkjson
 ```
-For run 398027 -> lumi = 1033.097330108 pb-1
+
+Let's start making the histograms
 
 ```bash
 python3 make_histograms.py \
