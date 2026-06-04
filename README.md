@@ -6,7 +6,7 @@ This study using input files from JEC4Prompt (J4PSkim_)
 
 More details from CMS 2025-2025 Data Analysis Workshop [JME project](https://indico.cern.ch/event/1681344/timetable/?view=standard#6-project-from-the-jme-pog)
 
----
+
 
 ## Set up
 
@@ -15,7 +15,7 @@ git clone git@github.com:Punnawichc/VBF_eta_spikes.git
 cd VBF_eta_spikes/Input_from_JEC4Prompt
 ```
 
----
+
 
 ## Analysis Structure
 
@@ -30,7 +30,6 @@ Input_from_JEC4Prompt/
     └── plots/             # output of plot_histograms.py
 ```
 
----
 
 ## How to Run
 
@@ -83,7 +82,6 @@ python3 plot_histograms.py \
     -lumi 1033.097330108
 ```
 
----
 
 ## Next Steps
 
@@ -93,5 +91,3 @@ python3 plot_histograms.py \
 [ ] Study DB (Direct Balance) Data/MC vs eta to measure JEC disagreement
 [ ] Check jet purity in spike region (Probe_genJetIdx)
 ```
-
----
