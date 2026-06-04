@@ -12,7 +12,7 @@ More details from CMS 2025-2025 Data Analysis Workshop [JME project](https://ind
 
 ```
 git clone git@github.com:Punnawichc/VBF_eta_spikes.git
-cd VBF_eta_spikes
+cd VBF_eta_spikes/Input_from_JEC4Prompt
 ```
 
 ---
