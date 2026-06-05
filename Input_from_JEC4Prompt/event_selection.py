@@ -66,8 +66,8 @@ if __name__ == "__main__":
 
     with uproot.recreate(out_path) as out_file:
         out_file.mktree("MC", {b: mc_arrays[b][mc_mask] for b in mc_branches}) 
-        out_file["Data"]     = {b: data_arrays[b][data_mask] for b in dt_branches}
-        out_file["Metadata"] = {"sumw": np.array([sumw])}
+        out_file.mktree("Data", {b: data_arrays[b][data_mask] for b in dt_branches}) 
+        out_file.mktree("Metadata", {"sumw": np.array([sumw])}) 
 
     print(f"\nSaved to {out_path}")
     print(f"  TTree: MC       ({mc_mask.sum()} events, with weight)")
