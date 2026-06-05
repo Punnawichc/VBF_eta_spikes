@@ -65,6 +65,12 @@ if __name__ == "__main__":
 
     f = ROOT.TFile.Open(args.input, "READ")
 
+    histnames = []
+    for key in f.GetListOfKeys():
+        name = key.GetName()
+        if name.endswith("_mc"):
+            histnames.append(name.replace("_mc", ""))
+
     print(f"\nFound histograms: {histnames}")
     print(f"Plotting from {args.input}...")
 
